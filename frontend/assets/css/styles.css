@@ -1,15 +1,247 @@
-/* General styles for both pages */
+/* General styles for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Aligns content horizontally */
+    align-items: center;      /* Aligns content vertically */
+    flex-direction: column;
+    min-height: 100vh;         /* Ensures the content takes up full height of the viewport */
+    background-color: #f5f5f5;
+    background-image: url('assets/img/Africa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;       /* Centers the text content */
+}
+
+/* Default Styles (Mobile First) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f5f5f5;
 }
 
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Desktop and Tablet Sizes */
+@media (min-width: 768px) {
+    h1, h2 {
+        font-size: 28px;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .service-card {
+        width: 280px;
+    }
+
+    .cards-wrapper {
+        justify-content: space-between;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    h1, h2 {
+        font-size: 32px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .service-card {
+        width: 300px;
+    }
+
+    .services-container {
+        justify-content: space-evenly;
+    }
+}
+
+/* About Section */
+.about {
+    background-image: url('assets/images/Africa.jpg');  /* Corrected the path to the image */
+    background-size: cover;                          /* Ensures the background image covers the whole section */
+    background-position: center;                     /* Centers the background image */
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto; /* Centers the About section and adds some space from other sections */
+    background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
+}
+
+.about h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Section */
+.profile {
+    padding: 40px 20px;
+    background-color: #eef6f9;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;         /* Limits the width of the profile container */
+    margin: 0 auto;            /* Centers the profile section horizontally */
+}
+
+/* Title of the Profile section */
+.profile h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Profile container holding all profile cards */
+.profile-container {
+    display: flex;
+    justify-content: center;  /* Centers the profile cards horizontally */
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+/* Individual profile cards */
+.profile-card {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image styling inside profile cards */
+.profile-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Profile card hover effect */
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Name styling inside profile cards */
+.profile-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Position text styling inside profile cards */
+.profile-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.services h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.service-card {
+    width: 280px;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* General styles for form and other elements */
 .form-container {
     background-color: #fff;
     padding: 30px;
@@ -18,12 +250,6 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
 }
 
 input {
@@ -62,3 +288,5 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
